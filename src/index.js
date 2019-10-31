@@ -1,6 +1,6 @@
 import { define } from './lib'
-import { Game } from './components/game'
+import { Main } from './components/main'
 
 const main = document.querySelector('main')
 
-main.appendChild(define(Game))
+main.appendChild(define(Main))

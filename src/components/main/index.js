@@ -1,8 +1,8 @@
-import { attachTemplate, render } from '../lib'
+import { attachTemplate, render } from '../../lib'
 import { h } from 'virtual-dom'
 import styles from './index.css'
 
-export class Game extends HTMLElement {
+export class Main extends HTMLElement {
   constructor() {
     super()
     this.styles = styles
@@ -10,11 +10,9 @@ export class Game extends HTMLElement {
   }
   attributeChangedCallback(attr, newVal) {
     this[attr] = newVal
-    this.updateCanvas()
     this.render()
   }
   connectedCallback() {
-    this.updateCanvas()
 
   }
   attachTemplate() {

@@ -9,12 +9,7 @@ function exit() {
 }
 
 app.set('views', __dirname + '/views')
-app.set('view engine', 'pug')
+app.use(express.static(path.join(__dirname, 'views')))
 app.use('/assets', express.static(path.join(__dirname, 'public')))
 app.use('/build', express.static(path.join(__dirname, 'build')))
 app.get('/', (req, res) => res.render('index', { title: 'Home' }))
-
-
-
-
-
